@@ -54,6 +54,14 @@
     <string name="potenza">x<sup><small>y</small></sup></string>
     <string name="primo">prime</string>
     <string name="benvenuto">Benvenuto</string>
+    <string-array name="lunghezza">
+        <item>metro</item>
+        <item>uno</item>
+        <item>uno</item>
+        <item>uno</item>
+        <item>uno</item>
+        <item>uno</item>
 
+    </string-array>
 
 </resources>
