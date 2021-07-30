@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_lenght"
+        android:title="Lunghezza"
+
+        />
+    <item
+        android:id="@+id/nav_mass"
+        android:title="Massa"
+
+        />
+    <item
+        android:id="@+id/nav_angle"
+        android:title="Angolo"
+
+        />
+    <item
+        android:id="@+id/nav_time"
+        android:title="Tempo"
+
+        />
+</menu>
