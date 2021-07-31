@@ -2,7 +2,6 @@ package math.calculator;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.View;
 
@@ -20,6 +20,7 @@ public class Activity_calc extends AppCompatActivity {
     private TextView risultato;
     private EditText schermo;
     private TextView title;
+    private ImageButton spazio;
     DrawerLayout drawerLayout;
 
     @Override
@@ -29,6 +30,7 @@ public class Activity_calc extends AppCompatActivity {
         risultato = findViewById(R.id.risultato);
         schermo = findViewById(R.id.display);
         title = findViewById(R.id.benvenuto);
+        spazio=findViewById(R.id.spazio);
         schermo.setShowSoftInputOnFocus(false); /*Imposta un valore che indica se il metodo di
                                                  input soft verrà reso visibile quando questo
                                                   TextView viene messo a punto. L'impostazione
@@ -39,25 +41,24 @@ public class Activity_calc extends AppCompatActivity {
         title.setText(String.format("%s %s", "Ciao", nickname));
         //assegnamento variabile
         drawerLayout = findViewById(R.id.drawer_layout);
+        spazio.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                clear(v);
+                return true;
+            }
+        });
 
     }
 
     //navigation drawer
-    public void ClickMenu(View view) {
+    public void openDrawer(View view) {
         //apro drawer
-        openDrawer(drawerLayout);
-    }
-
-    public static void openDrawer(DrawerLayout drawerLayout) {
-        //apro drawer layout
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
-    public void ClickLogo(View view) {
-        closeDrawer(drawerLayout);
-    }
 
-    public static void closeDrawer(DrawerLayout drawerLayout) {
+    public void closeDrawer(View view) {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             //quando il drawer è aperto lo chiudo
             drawerLayout.closeDrawer(GravityCompat.START);
@@ -65,13 +66,13 @@ public class Activity_calc extends AppCompatActivity {
         }
     }
 
-    public void ClickHome(View view) {
+    public void clickHome(View view) {
         recreate();
     }
 
 
 
-    public void Clickconvertitore(View view) {
+    public void clickconvertitore(View view) {
         redirectActivity(this, Convertitore.class);
     }
 
@@ -234,6 +235,7 @@ public class Activity_calc extends AppCompatActivity {
     public void spazio(View v) {
         int cursore = schermo.getSelectionStart();
         int textLen = schermo.getText().length();
+
         if (cursore != 0 && textLen != 0) {
             SpannableStringBuilder sel = (SpannableStringBuilder) schermo.getText();
             //replace sostituisce il testo compreso tra start e end con la stringa che vogliamo
@@ -291,7 +293,7 @@ public class Activity_calc extends AppCompatActivity {
     }
 
     public void pigreco(View view) {
-        upText("pi(");
+        upText("pi");
     }
 
     public void modulo(View view) {
@@ -306,5 +308,14 @@ public class Activity_calc extends AppCompatActivity {
         upText("^(2)");
     }
 
+    public void scriviX(View view) {
+        upText("x");
+    }
+    public void scriviY(View view) {
+        upText("y");
+    }
+    public void funzione(View view) {
+        upText("f(");
+    }
 }
 

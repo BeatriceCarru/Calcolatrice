@@ -351,16 +351,14 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/tableLayout"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/display"
-                    tools:context=".Activity_calc">
+                    tools:context=".Activity_calc"
+                    >
 
                     <android.support.constraint.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/tableLayout"
-                        app:layout_constraintStart_toStartOf="parent">
+
+                      >
 
                         <Button
                             android:id="@+id/seno"
@@ -580,13 +578,14 @@
                             app:layout_constraintTop_toBottomOf="@+id/modulo" />
 
                         <Button
-                            android:id="@+id/ciao"
+                            android:id="@+id/scriviX"
                             android:layout_width="0dp"
                             android:layout_height="40dp"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/botton_circle"
-                            android:text="@string/potenza"
+                            android:text="@string/scrivix"
+                            android:onClick="scriviX"
                             android:textAllCaps="false"
                             android:textColor="@color/tanAccent"
                             android:textSize="15sp"
@@ -594,31 +593,33 @@
                             app:layout_constraintTop_toBottomOf="@+id/primo" />
 
                         <Button
-                            android:id="@+id/cia"
+                            android:id="@+id/scriviY"
                             android:layout_width="0dp"
                             android:layout_height="40dp"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/botton_circle"
-                            android:text="@string/potenza"
+                            android:onClick="scriviY"
+                            android:text="@string/scriviy"
                             android:textAllCaps="false"
                             android:textColor="@color/tanAccent"
                             android:textSize="15sp"
-                            app:layout_constraintStart_toEndOf="@+id/ciao"
+                            app:layout_constraintStart_toEndOf="@+id/scriviX"
                             app:layout_constraintTop_toBottomOf="@+id/xQuadrato" />
 
                         <Button
-                            android:id="@+id/mia"
+                            android:id="@+id/funzione"
                             android:layout_width="0dp"
                             android:layout_height="40dp"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/botton_circle"
-                            android:text="@string/potenza"
+                            android:text="@string/funzione"
+                            android:onClick="funzione"
                             android:textAllCaps="false"
                             android:textColor="@color/tanAccent"
                             android:textSize="15sp"
-                            app:layout_constraintStart_toEndOf="@+id/cia"
+                            app:layout_constraintStart_toEndOf="@+id/scriviY"
                             app:layout_constraintTop_toBottomOf="@+id/potenza" />
                     </android.support.constraint.ConstraintLayout>
                 </ScrollView>

@@ -50,6 +50,9 @@
     <string name="modulo">|x|</string>
     <string name="pigreco">π</string>
     <string name="nepero">e</string>
+    <string name="scrivix">x</string>
+    <string name="scriviy">y</string>
+    <string name="funzione">f(x)</string>
     <string name="xQuadro">x<sup><small>2</small></sup></string>
     <string name="potenza">x<sup><small>y</small></sup></string>
     <string name="primo">prime</string>

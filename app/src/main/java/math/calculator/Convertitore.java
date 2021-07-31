@@ -45,7 +45,7 @@ public class Convertitore extends AppCompatActivity   {
 
     }*/
 
-    public void ClickMenu(View view)
+  /*  public void ClickMenu(View view)
     {
         //apro drawer
         openDrawer(drawerLayout);
@@ -103,6 +103,6 @@ public class Convertitore extends AppCompatActivity   {
         activity.startActivity(intent);
 
     }
-
+*/
 
 }

@@ -18,6 +18,7 @@ public class Grafico extends AppCompatActivity {
         setContentView(R.layout.grafico);
        drawerLayout=findViewById(R.id.drawer_layout);
     }
+    /*
     public void ClickMenu(View view)
     {
         //deve
@@ -73,6 +74,6 @@ public class Grafico extends AppCompatActivity {
 
     }
 
-
+*/
 
 }
